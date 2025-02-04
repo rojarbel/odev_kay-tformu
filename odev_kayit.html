@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            background: #28a745;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Kayıt Formu</h2>
+        <form id="registrationForm">
+            <label for="name">Ad Soyad</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-Posta</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Telefon Numarası</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="dob">Doğum Tarihi</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="gender">Cinsiyet</label>
+            <select id="gender" name="gender" required>
+                <option value="">Seçiniz</option>
+                <option value="male">Erkek</option>
+                <option value="female">Kadın</option>
+                <option value="other">Diğer</option>
+            </select>
+            
+            <label for="address">Adres</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+            
+            <label for="education">Eğitim Durumu</label>
+            <select id="education" name="education" required>
+                <option value="">Seçiniz</option>
+                <option value="highschool">Lise</option>
+                <option value="bachelor">Lisans</option>
+                <option value="master">Yüksek Lisans</option>
+                <option value="phd">Doktora</option>
+            </select>
+            
+            <label for="course">Kayıt Olunan Kurs/Etkinlik</label>
+            <input type="text" id="course" name="course" required>
+            
+            <label for="notes">Ekstra Açıklamalar</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+            
+            <button type="submit">Kaydol</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Kayıt başarıyla tamamlandı!");
+        });
+    </script>
+</body>
+</html>
